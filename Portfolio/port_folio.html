@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio WebSite</title>
+    <link rel="stylesheet" href="CSS/port_folio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fire+Code:wght@400;500&display=swap">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+    <header class="header" id="header">
+        <nav class="navbar">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-text">Portfolio</span>
+                <span class="logo-bracket">&gt;</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item"><a href="#hero" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
+                <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+                <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <section class="hero" id="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-greeting reveal fade-up">
+                    <span class="wave-emoji"></span> Hello I'm
+                </div>
+                <h1 class="hero-name reveal fade-up">John Anderson</h1>
+                <div class="hero-profession-wrapper reveal fade-up">
+                    <span class="static-text">I'm a </span>
+                    <span class="typing-text" id="typingText"></span>
+                    <span class="cursor-blink">|</span>
+                </div>
+                <p class="hero-intro reveal fade-up">
+                    Passionate Web Developer with 2+ years of experience crafting beautiful,
+                    responsive, and user-friendly web applications. I turn complex problems into simple
+                    elegant solutions.
+                </p>
+                <div class="hero-buttons reveal fade-up">
+                    <button class="btn btn-primary" id="downloadResumeBtn">
+                        <i class="fas fa-download"></i> Download Resume
+                    </button>
+                    <a href="#contact" class="btn btn-outline">
+                        <i class="fas fa-envelope"></i> Contact Me
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image-wrapper reveal fade-in">
+                <div class="hero-image-container">
+                    <div class="profile-image-placeholder">
+                        <img src="images/alex.jpg" alt="John Anderson">
+                    </div>
+                    <div class="hero-badge">
+                        <span class="badge-dot"></span> Available for Work
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span class="scroll-text">Scroll Down</span>
+            <div class="scroll-mouse">
+                <span class="scroll-dot"></span>
+            </div>
+        </div>
+    </section>
+    <section class="about section" id="about">
+        <div class="section-container">
+            <h2 class="section-title reveal fade-up">
+                <span class="title-number">01.</span> About Me
+                <span class="title-line"></span>
+            </h2>
+            <div class="about-grid">
+                <div class="about-text reveal fade-up">
+                    <h3 class="about-heading">Breif Introduction</h3>
+                    <p>
+                        I am a fully dedicated full-stack web developer with a keen eye for design and a
+                        passion for creating seamless digital experiences. My journey in web development
+                        started 2 years ago and since then, I have worked on numerous projects ranging from
+                        small business websites to complex web applications.
+                    </p>
+                    <h3 class="about-heading">
+                        Career Objectives
+                    </h3>
+                    <p>
+                        To leverage my technical expertise in modern web technologies to build impactful
+                        digital products. I aim to contribute to innovative teams where I can grow as a
+                        developer while delivering high quality solutions that exceed client expectations.
+                    </p>
+                </div>
+                <div class="about-details reveal fade-up">
+                    <div class="about-card">
+                        <h4><i class="fas fa-heart"></i> Interests</h4>
+                        <ul>
+                            <li>Open Source Contribution</li>
+                            <li>UI/UX Design Trends</li>
+                            <li>Cloud Technologies</li>
+                            <li>Tech Blogging</li>
+                            <li>Competitive Programming</li>
+                        </ul>
+                    </div>
+                    <div class="about-card">
+                        <h4><i class="fas fa-dumbbell"></i> Strength</h4>
+                        <ul>
+                            <li>Problem-Solving Mindset</li>
+                            <li>Quick Learner & Adaptable</li>
+                            <li>Strong Communication</li>
+                            <li>Attention to Details</li>
+                            <li>Team Collaboration</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="skills section" id="skills">
+        <div class="section-container">
+            <h2 class="section-title reveal fade-up">
+                <span class="title-number">02.</span> Skills
+                <span class="tit-line"></span>
+            </h2>
+            <div class="skills-grid" id="skillsGrid">
+                <div class="skill-card reveal fade-up"><i class="fab fa-html5"></i><span>HTML</span></div>
+                <div class="skill-card reveal fade-up"><i class="fab fa-css3-alt"></i><span>CSS</span></div>
+                <div class="skill-card reveal fade-up"><i class="fab fa-css3"></i><span>Tailwind CSS</span></div>
+                <div class="skill-card reveal fade-up"><i class="fab fa-js"></i><span>JavaScript</span></div>
+                <div class="skill-card reveal fade-up"><i class="fab fa-react"></i><span>React</span></div>
+                <div class="skill-card reveal fade-up"><i class="fab fa-python"></i><span>Python</span></div>
+                <div class="skill-card reveal fade-up"><i class="fas fa-server"></i><span>Django</span></div>
+                <div class="skill-card reveal fade-up"><i class="fas fa-database"></i><span>MySQL</span></div>
+                <div class="skill-card reveal fade-up"><i class="fab fa-git-alt"></i><span>Git</span></div>
+            </div>
+        </div>
+    </section>
+    <section class="projects section" id="projects">
+        <div class="section-container">
+            <h2 class="section-title reveal fade-up">
+                <span class="title-number">03.</span> Projects
+                <span class="title-line"></span>
+            </h2>
+            <div class="project-filters reveal fade-up" id="projectFilters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="major">Major Projects</button>
+                <button class="filter-btn" data-filter="mid">Mid-Level</button>
+            </div>
+            <div class="projects-grid" id="projectsGrid">
+                <div class="project-card reveal fade-up" data-category="major">
+                    <div class="project-img"><img src="images/project1.jpg" alt="Ecommerce Projects"></div>
+                    <div class="project-info">
+                        <h3>E-commerce Platform</h3>
+                        <p>
+                            A full-featured online store with payment integration, admin dashboard and order management.
+                        </p>
+                        <div class="project-tech">
+                            <span>React</span> <span>MySQL</span> <span>Django</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card reveal fade-up" data-category="major">
+                    <div class="project-img"><img src="images/project2.jpg" alt="TMS"></div>
+                    <div class="project-info">
+                        <h3>Task Manager App</h3>
+                        <p>
+                            Collaborative project management tool with real-time updates, drag-and-dop, and analytics.
+                        </p>
+                        <div class="project-tech">
+                            <span>React</span> <span>Python</span> <span>Git</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card reveal fade-up" data-category="major">
+                    <div class="project-img"><img src="images/project3.jpg" alt="Social Modeia Dashboard"></div>
+                    <div class="project-info">
+                        <h3>Social Media Dashboard</h3>
+                        <p> Analytics dashboard aggregates social media metrices with beautiful with
+                            beautiful charts and data grids. </p>
+                        <div class="project-tech">
+                            <span>JavaScript</span> <span>TailwindCSS</span> <span>Python</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card reveal fade-up" data-category="major">
+                    <div class="project-img"><img src="images/project4.jpg" alt="Blog Platform"></div>
+                    <div class="project-info">
+                        <h3>Blog Platform</h3>
+                        <p>Custom CMS with markdown support, SEO Optimization, and user commenting system.</p>
+                        <div class="projects-tech">
+                            <span>Django</span> <span>MySQL</span> <span>HTML</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card reveal fade-up" data-category="major">
+                    <div class="project-img"><img src="images/project5.jpg" alt="" Portfolio Builder></div>
+                    <div class="project-info">
+                        <h3>Portfolio Builder</h3>
+                        <p>
+                            Drag-and-Drop website builder for developers to create stunning portfolios without coding.
+                        </p>
+                        <div class="projects-tech">
+                            <span>React</span> <span>JavaScript</span> <span>CSS</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card reveal fade-up" data-category="mid">
+                    <div class="project-img"><img src="images/project6.jpg" alt="Weather App"></div>
+                    <div class="project-info">
+                        <h3>Weather App</h3>
+                        <p>
+                            Real time weather forecast with geolocation, interactive maps and 7-day predictions.
+                        </p>
+                        <div class="project-tech">
+                            <span>JavaScript</span> <span>CSS</span> <span>HTML</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card reveal fade-up" data-category="mid">
+                    <div class="project-img"><img src="images/project7.jpg" alt="Advanced To-Do List"></div>
+                    <div class="project-info">
+                        <h3>Advanced To-Do List</h3>
+                        <p>
+                            Persistent to-do app with local storage, categories and deadline reminders.
+                        </p>
+                        <div class="project-tech">
+                            <span>JavaScript</span> <span>CSS</span> <span>HTML</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card reveal fade-up" data-category="mid">
+                    <div class="project-img"><img src="images/project8.jpg" alt="Resturant Menu"></div>
+                    <div class="project-info">
+                        <h3>Resturant Menu</h3>
+                        <p>Responsive single-page menu with filtering, search and smooth animations.</p>
+                        <div class="project-tech">
+                            <span>HTML</span> <span>Tailwind CSS</span> <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="education section" id="education">
+        <div class="section-container">
+            <h2 class="section-title reveal fade-up">
+                <span class="title-number">04.</span> Education
+                <span class="title-line"></span>
+            </h2>
+            <div class="education-timeline reveal fade-up">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2021 - 2023</span>
+                        <h3>Master of Computer Applications (MCA)</h3>
+                        <p class="timeline-university">University of Technology, San Francisco</p>
+                        <p class="timeline-coursework">
+                            <strong>Relevant Coursework:</strong>
+                            Software Engineering, Cloud Computing, Data Structures & Alogorithms,
+                            Advance Web Development, Database Systems
+                        </p>
+                        <p class="timeline-extra">
+                            <strong>Activities:</strong>
+                            Google Developer Student Club Member, National Hackathon Finalist 2022,
+                            TechFest Web Dev Competition Winner
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2018 - 2021</span>
+                        <h3>Bachelor of Science in Computer Science</h3>
+                        <p class="timeline-university">State University of New York</p>
+                        <p class="timeline-coursework">
+                            <span>Relevant Coursework:</span>
+                            Operating Systems, Computer Networks, Object Oriented Programming, Programming
+                            Fundamentals, Web Technologies
+                        </p>
+                        <p class="timeline-extra">
+                            <strong>Activities:</strong>
+                            Coding Club President, Inter-College Coding Competition 2nd Place, Summer
+                            Internship at TechStart Inc.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="experience section" id="experience">
+        <div class="section-container">
+            <h2 class="section-title reveal fade-up">
+                <span class="title-number">05.</span> Experience
+                <span class="title-line"></span>
+            </h2>
+            <p class="experience-subtitle reveal fade-up">2+ Years of Field Work</p>
+            <div class="experience-grid reveal fade-up">
+                <div class="experience-card">
+                    <div class="exp-icon"><i class="fas fa-briefcase"></i></div>
+                    <h3>Freelance Web Developer</h3>
+                    <span class="exp-duration">Jan 2024- Present</span>
+                    <p>
+                        Delivered 15+ custom websites for small businesses and startups. Specialized in
+                        responsive design, performance Optimization, and SEO friendly architectures using
+                        react, django, and modern CSS frameworks.
+                    </p>
+                    <div class="exp-tags">
+                        <span>React</span> <span>Django</span> <span>Tailwind CSS</span> <span>MySQL</span>
+                    </div>
+                </div>
+                <div class="experience-card">
+                    <div class="exp-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Web Development Intern</h3>
+                    <span class="exp-duration">Jun 2023 - Dec 2023</span>
+                    <p>
+                        Worked with a cross-functional team at DigitalCraft Agency. Built and maintained
+                        client websites, implemented new features, and participated in code reviews. Gained
+                        hands-on experience with agile frameowrk.
+                    </p>
+                    <div class="exp-tags">
+                        <span>JavaScript</span> <span>Python</span> <span>Git</span>
+                        <span>HTML</span> <span>CSS</span>
+                    </div>
+                </div>
+                <div class="experience-card">
+                    <div class="exp-icon"><i class="fas fa-project-diagram"></i></div>
+                    <h3>Junior Developer (Contract)</h3>
+                    <span class="exp-duration">Jan 2023 - May 2023</span>
+                    <p>
+                       Contibuted to an ecommerce platform migration project. Assisted in Database Design,
+                       API Integration and frontend bug fixes. Collaborated remotely with an international team.
+                    </p>
+                    <div class="exp-tags">
+                        <span>MySQL</span> <span>Python</span> <span>JavaScript</span> <span>Django</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="services section" id="services">
+        <div class="section-container">
+            <h2 class="section-title reveal fade-up">
+                <span class="title-number">06.</span> Services 
+                <span class="title-line"></span>
+            </h2>
+            <div class="services-grid reveal fade-up">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-code"></i></div>
+                    <h3>Frontend Development</h3>
+                    <p>
+                        Building pixel-perfect, responsive and interactive user interfaces using modern
+                        frameworks like React, with smooth animations and optimal performance.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-server"></i></div>
+                    <h3>Backend Development</h3>
+                    <p>
+                        Creating robust, scalable erver-side applications with Python & Django, RESTful
+                        API design, database management, and secure authentication systems.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>Responsive Design</h3>
+                    <p>
+                        Designing websites that look flawless across all devices  - mobile, tablet and 
+                        desktop - with fluid layouts, flexible images, and adaptive breakpoints.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact section" id="contact">
+        <div class="section-container">
+            <h2 class="section-title reveal fade-up">
+                <span class="title-number">07.</span> Contact 
+                <span class="title-line"></span>
+            </h2>
+            <div class="content-grid reveal fade-up">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <p>
+                        I would love to hear from you! Whether it is a project inquiry, collaboration 
+                        opportunity, or just a friendly hello - feel free to reach out.
+                    </p>
+                    <div class="contact-detail">
+                        <i class="fas fa-envelope"></i>
+                        <span>JohnDoe666@gmail.com</span>
+                    </div>
+                    <div class="contact-detail">
+                        <i class="fas fa-phone"></i>
+                        <span>+1 555 8789120</span>
+                    </div>
+                    <div class="contact-detail">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>NewYork, USA</span>
+                    </div>
+                </div>
+                <form action="#" class="contact-form" id="contactForm" novalidate>
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" placeholder="Enter Your Full Name" required minlength="3">
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email Address</label>
+                        <input type="email" id="email" placeholder="Enter Your Email Address" required>
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" placeholder="What is this about?" required minlength="5">
+                        <span class="error-message" id="subjectError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5" cols="5" placeholder="Enter your message here...." required minlength="12"></textarea>
+                        <span class="error-message" id="messageError"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary submit-btn">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                    <button type="reset" class="btn btn-primary reset-btn">
+                        Reset
+                    </button>
+                    <div class="form-success" id="formSuccess">
+                        <i class="fas fa-check-circle"></i> Message sent successfully! I will get back to you soon.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section class="social-links section" id="social">
+        <div class="section-container">
+            <h2 class="section-title reveal fade-up" style="text-align: center;">
+                <span class="title-number">08.</span> Connect With Me
+                <span class="title-line"></span>
+            </h2>
+            <div class="social-links-grid reveal fade-up">
+                <a href="https://github.com" target="_blank" rel="noopner noreferrer" class="social-link-card" aria-label="GitHub">
+                       <i class="fab fa-github"></i>
+                       <span>GitHub</span>
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopner noreferrer" class="social-link-card" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://facebook.com" target="_blank" rel="noopner noreferrer" class="social-link-card" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                    <span>Facebook</span>
+                </a>
+                <a href="https://youtube.com" target="_blank" rel="noopner noreferrer" class="social-link-card" aria-label="YouTube">
+                    <i class="fab fa-youtube"></i>
+                    <span>YouTube</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <footer class="footer" id="footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#hero" class="footer-logo">
+                        <span class="logo-bracket">&lt;</span> Portfolio <span class="logo-bracket">&gt;</span>
+                    </a>
+                    <p>Building digital experiences that make a difference.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Navigations</h4>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Me</h4>
+                    <div class="footer-social-icons">
+                        <a href="https://github.com" target="_blank" rel="noopner" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopner" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://x.com" target="_blank" rel="noopner" aria-label="X">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                        <a href="https://facebook.com" target="_blank" rel="noopner" aria-label="Facebook">
+                             <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://youtube.com" target="_blank" rel="noopner" aria-label="YouTube">
+                              <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>
+                    &copy; <span id="currentYear">2026</span> John Anderson. All rights reserved. Built with 
+                    <i class="fab fa-heart"></i>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <button class="scroll-to-top" id="scrollToTopBtn" aria-label="Scroll to top">
+         <i class="fas fa-arrow-up"></i> Back to Top
+    </button>
+    <script src="JavaScript/port_folio.js"></script>
+</body>
+
+</html>
