@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BlogSphere — Your Daily Dose of Ideas</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <!-- Google Font: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="CSS/Blogs.css" />
+</head>
+<body>
+
+    <!-- ===== PROGRESS BAR ===== -->
+    <div id="progress-bar"></div>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <div class="logo-wrap">
+                <span class="logo-icon"><i class="fas fa-blog"></i></span>
+                <span class="logo-text">Blog<span>Sphere</span></span>
+            </div>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="#home" class="active" data-nav>Home</a>
+                <a href="#categories" data-nav>Categories</a>
+                <a href="#about" data-nav>About</a>
+                <a href="#contact" data-nav>Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="search-toggle" id="searchToggle" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== SEARCH OVERLAY ===== -->
+    <div class="search-overlay" id="searchOverlay">
+        <form class="search-form" id="searchForm">
+            <input type="text" id="searchInput" placeholder="Search by title, author, or category..." />
+            <button type="submit"><i class="fas fa-search"></i> Search</button>
+        </form>
+    </div>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home">
+        <div class="container hero-grid">
+            <div class="hero-image" id="heroImage">
+                <img src="https://picsum.photos/seed/hero/800/500" alt="Featured blog" />
+            </div>
+            <div class="hero-content" id="heroContent">
+                <div class="hero-meta">
+                    <span id="heroCategory">Featured</span>
+                    <span>•</span>
+                    <span id="heroDate">March 15, 2026</span>
+                </div>
+                <h1 id="heroTitle">The Future of Digital Storytelling</h1>
+                <p id="heroDesc">Exploring how AI, immersive media, and human creativity are converging to reshape the way we tell stories online. A deep dive into the next frontier of content.</p>
+                <button class="hero-btn" id="heroCommentBtn">
+                    <i class="fas fa-comment"></i> Add a Comment
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CATEGORIES ===== -->
+    <section class="categories-section" id="categories">
+        <div class="container">
+            <h2 class="section-title">Categories</h2>
+            <p class="section-sub">Explore posts by topic</p>
+            <div class="categories-filter" id="categoryFilter">
+                <button class="active" data-cat="all">All</button>
+                <button data-cat="Technology">Technology</button>
+                <button data-cat="Programming">Programming</button>
+                <button data-cat="Lifestyle">Lifestyle</button>
+                <button data-cat="Travel">Travel</button>
+                <button data-cat="Fashion">Fashion</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== BLOG POSTS ===== -->
+    <section class="blog-section" id="blogSection">
+        <div class="container">
+            <div class="sort-wrap">
+                <label for="sortSelect"><i class="fas fa-sort"></i> Sort by:</label>
+                <select id="sortSelect">
+                    <option value="newest">Newest First</option>
+                    <option value="oldest">Oldest First</option>
+                </select>
+            </div>
+
+            <div class="blog-grid" id="blogGrid"></div>
+
+            <!-- Pagination -->
+            <div class="pagination" id="pagination"></div>
+        </div>
+    </section>
+
+    <!-- ===== NEWSLETTER ===== -->
+    <section class="newsletter" id="newsletter">
+        <div class="container">
+            <div class="newsletter-inner">
+                <h2><i class="fas fa-envelope" style="color:var(--accent);margin-right:10px;"></i> Join Our Newsletter</h2>
+                <p>Get the latest posts delivered straight to your inbox. No spam, unsubscribe anytime.</p>
+                <form class="news-form" id="newsletterForm">
+                    <input type="email" id="newsEmail" placeholder="Enter your email" required />
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2>About BlogSphere</h2>
+                    <p>
+                        BlogSphere is a vibrant digital space where ideas come to life. Founded in 2025,
+                        we are passionate about sharing knowledge, sparking curiosity, and building a
+                        community of thinkers and dreamers. From tech deep-dives to lifestyle musings,
+                        we cover the topics that matter to you — with authenticity and a touch of wonder.
+                    </p>
+                    <p style="margin-top:12px;color:var(--text-muted);">
+                        <i class="fas fa-quote-left" style="color:var(--accent);margin-right:6px;"></i>
+                        Every story has a voice. We help you find yours.
+                    </p>
+                </div>
+                <div class="about-image">
+                    <i class="fas fa-pencil-alt"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <p class="section-sub">We'd love to hear from you</p>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <div class="icon"><i class="fas fa-envelope"></i></div>
+                    <h4>Email</h4>
+                    <p>hello@blogsphere.com</p>
+                </div>
+                <div class="contact-item">
+                    <div class="icon"><i class="fas fa-share-alt"></i></div>
+                    <h4>Social Media</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="icon"><i class="fas fa-map-pin"></i></div>
+                    <h4>Location</h4>
+                    <p>San Francisco, CA</p>
+                </div>
+                <div class="contact-item">
+                    <div class="icon"><i class="fas fa-phone"></i></div>
+                    <h4>Phone</h4>
+                    <p>+1 (800) 555‑BLOG</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="brand">
+                    <div class="logo-wrap" style="gap:8px;">
+                        <span class="logo-icon" style="font-size:24px;"><i class="fas fa-blog"></i></span>
+                        <span class="logo-text" style="font-size:20px;">Blog<span>Sphere</span></span>
+                    </div>
+                    <p>Where ideas spark and stories spread. Join thousands of readers exploring the world one post at a time.</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#categories">Categories</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="#" data-cat="Technology">Technology</a></li>
+                        <li><a href="#" data-cat="Programming">Programming</a></li>
+                        <li><a href="#" data-cat="Lifestyle">Lifestyle</a></li>
+                        <li><a href="#" data-cat="Travel">Travel</a></li>
+                        <li><a href="#" data-cat="Fashion">Fashion</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 BlogSphere. All rights reserved.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== BACK TO TOP ===== -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- ===== COMMENT MODAL ===== -->
+    <div class="modal-overlay" id="commentModal">
+        <div class="modal-box comment-modal">
+            <button class="modal-close" id="commentModalClose">&times;</button>
+            <h3 id="commentModalTitle">Add a Comment</h3>
+            <div id="commentList" class="comment-list"></div>
+            <form id="commentForm">
+                <textarea id="commentText" placeholder="Write your comment…" rows="3" required></textarea>
+                <button type="submit" class="modal-btn">Post Comment</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ===== SUCCESS / INFO MODAL (for other confirmations) ===== -->
+    <div class="modal-overlay" id="infoModal">
+        <div class="modal-box">
+            <div class="modal-icon"><i class="fas fa-check-circle"></i></div>
+            <h3 id="infoModalTitle">Thank You!</h3>
+            <p id="infoModalMessage">Your action was completed successfully.</p>
+            <button class="modal-btn" id="infoModalBtn">OK, Great!</button>
+        </div>
+    </div>
+
+    <!-- ===== MAIN JAVASCRIPT ===== -->
+    <script src="JavaScript/Blogs.js"></script>
+</body>
+</html>
