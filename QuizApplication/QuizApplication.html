@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuizMaster Pro</title>
+    <link rel="stylesheet" href="CSS/QuizApplication.css" />
+</head>
+<body>
+
+    <!-- ====== WELCOME SCREEN ====== -->
+    <section id="welcome-screen" class="screen active">
+        <div class="container welcome-container">
+            <div class="welcome-content">
+                <div class="logo-icon">🧠</div>
+                <h1 class="project-title">QuizMaster Pro</h1>
+                <p class="tagline">Test your knowledge across multiple domains</p>
+
+                <div class="instructions-box">
+                    <h3>📋 Instructions</h3>
+                    <ul>
+                        <li>Answer all <strong>25</strong> questions to the best of your ability.</li>
+                        <li>Each correct answer scores <strong>1 point</strong>. No negative marking.</li>
+                        <li>You have <strong>300 seconds (5 minutes)</strong> to complete the quiz.</li>
+                        <li>Use <strong>Previous</strong> &amp; <strong>Next</strong> buttons to navigate.</li>
+                        <li>Submit your answers only when you're ready.</li>
+                        <li>Questions and options are <strong>randomized</strong> each session.</li>
+                        <li>Switch <strong>Dark/Light</strong> mode using the toggle above.</li>
+                    </ul>
+                </div>
+
+                <div class="quiz-meta">
+                    <span>📚 25 Questions</span>
+                    <span>⏱️ 300 Seconds</span>
+                    <span>🏷️ 4 Categories</span>
+                </div>
+
+                <button id="start-btn" class="glow-btn">🚀 Start Quiz</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== QUIZ SCREEN ====== -->
+    <section id="quiz-screen" class="screen">
+        <div class="container quiz-container">
+
+            <!-- Quiz Header -->
+            <header class="quiz-header">
+                <div class="header-left">
+                    <h2 class="quiz-title">📝 QuizMaster Pro</h2>
+                    <span class="question-counter" id="question-counter">1 / 25</span>
+                </div>
+                <div class="header-right">
+                    <div class="progress-stats">
+                        <span class="stat correct-stat">✅ <span id="correct-count">0</span></span>
+                        <span class="stat wrong-stat">❌ <span id="wrong-count">0</span></span>
+                        <span class="stat score-stat">⭐ <span id="current-score">0</span></span>
+                    </div>
+                    <div class="timer-wrapper">
+                        <span class="timer-icon">⏱️</span>
+                        <span class="timer-display" id="timer-display">300s</span>
+                    </div>
+                    <button id="theme-toggle" class="theme-toggle" title="Toggle Dark/Light Mode">🌙</button>
+                </div>
+            </header>
+
+            <!-- Progress Bar -->
+            <div class="progress-bar-wrapper">
+                <div class="progress-bar" id="progress-bar" style="width: 0%;"></div>
+            </div>
+
+            <!-- Question Section -->
+            <div class="question-section">
+                <div class="question-meta">
+                    <span class="category-badge" id="question-category">General</span>
+                    <span class="difficulty-badge" id="question-difficulty">Easy</span>
+                </div>
+                <h3 class="question-text" id="question-text">Loading question...</h3>
+            </div>
+
+            <!-- Options Section -->
+            <div class="options-section" id="options-container">
+                <!-- Options will be rendered here -->
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="nav-buttons">
+                <button id="prev-btn" class="nav-btn prev-btn">◀ Previous</button>
+                <button id="next-btn" class="nav-btn next-btn">Next ▶</button>
+                <button id="submit-btn" class="nav-btn submit-btn" style="display: none;">📤 Submit</button>
+            </div>
+
+            <!-- Category & Difficulty Filters -->
+            <div class="filter-bar">
+                <div class="filter-group">
+                    <label>Category:</label>
+                    <select id="category-filter">
+                        <option value="all">All</option>
+                        <option value="General">General</option>
+                        <option value="History">History</option>
+                        <option value="Political">Political</option>
+                        <option value="Technology">Technology</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Difficulty:</label>
+                    <select id="difficulty-filter">
+                        <option value="all">All</option>
+                        <option value="Easy">Easy</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Hard">Hard</option>
+                    </select>
+                </div>
+                <button id="apply-filter-btn" class="filter-apply-btn">Apply Filters</button>
+                <button id="reset-filter-btn" class="filter-reset-btn">Reset</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ====== RESULT SCREEN ====== -->
+    <section id="result-screen" class="screen">
+        <div class="container result-container">
+            <div class="result-content">
+                <div class="result-icon" id="result-icon">🏆</div>
+                <h2 class="result-title" id="result-title">Quiz Complete!</h2>
+
+                <div class="result-stats">
+                    <div class="result-stat"><span>📝 Total Questions</span><span id="result-total">25</span></div>
+                    <div class="result-stat"><span>✅ Correct</span><span id="result-correct">0</span></div>
+                    <div class="result-stat"><span>❌ Wrong</span><span id="result-wrong">0</span></div>
+                    <div class="result-stat"><span>⭐ Score</span><span id="result-score">0</span></div>
+                    <div class="result-stat"><span>📊 Percentage</span><span id="result-percentage">0%</span></div>
+                </div>
+
+                <div class="result-message" id="result-message">Great job!</div>
+
+                <!-- Review Answers -->
+                <div class="review-section">
+                    <h4>📖 Review Answers</h4>
+                    <div id="review-container"></div>
+                </div>
+
+                <!-- High Scores -->
+                <div class="high-scores-section">
+                    <h4>🏅 High Scores</h4>
+                    <div id="high-scores-container"></div>
+                </div>
+
+                <button id="restart-btn" class="restart-btn">🔄 Restart Quiz</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== FOOTER ====== -->
+    <footer class="app-footer">
+        <div class="footer-content">
+            <p>© 2026 <strong>QuizMaster Pro</strong> — Built with ❤️ for knowledge seekers.</p>
+            <p class="footer-links">
+                <span>📧 quizmaster@example.com</span>
+                <span>🕒 v2.0</span>
+                <span>🧠 25 Questions • 4 Categories</span>
+            </p>
+        </div>
+    </footer>
+
+    <script src="JavaScript/QuizApplication.js"></script>
+</body>
+</html>
